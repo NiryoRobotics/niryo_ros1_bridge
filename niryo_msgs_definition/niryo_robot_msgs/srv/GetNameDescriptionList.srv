@@ -5,3 +5,5 @@ string message
 string[] name_list
 string[] description_list
 BasicObject[] objects
+# New field to track when the list was last updated
+time timestamp

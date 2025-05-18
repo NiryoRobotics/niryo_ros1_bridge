@@ -44,20 +44,40 @@
     actual: 'actual'
     error: 'error'
 
+# Uncomment and add mapping for rosgraph_msgs/Log to rcl_interfaces/Log
+-
+  enable_foreign_mappings: true
+  ros1_package_name: 'rosgraph_msgs'
+  ros1_message_name: 'Log'
+  ros2_package_name: 'rcl_interfaces'
+  ros2_message_name: 'Log'
+  fields_1_to_2:
+    header.stamp: 'stamp'
+    level: 'level'
+    name: 'name'
+    msg: 'msg'
+    file: 'file'
+    function: 'function'
+    line: 'line'
+    topics: null
 
-# Note: This won't work since the defines for the different levels changed.
-# -
-#   enable_foreign_mappings: true
-#   ros1_package_name: 'rosgraph_msgs'
-#   ros1_message_name: 'Log'
-#   ros2_package_name: 'rcl_interfaces'
-#   ros2_message_name: 'Log'
-#   fields_1_to_2:
-#     header.stamp: 'stamp'
-#     level: 'level'
-#     name: 'name'
-#     msg: 'msg'
-#     file: 'file'
-#     function: 'function'
-#     line: 'line'
-#     topics: null
+# Add mapping for std_msgs/String
+-
+  enable_foreign_mappings: true
+  ros1_package_name: 'std_msgs'
+  ros1_message_name: 'String'
+  ros2_package_name: 'std_msgs'
+  ros2_message_name: 'String'
+  fields_1_to_2:
+    data: 'data'
+
+# Add mapping for geometry_msgs/Pose
+-
+  enable_foreign_mappings: true
+  ros1_package_name: 'geometry_msgs'
+  ros1_message_name: 'Pose'
+  ros2_package_name: 'geometry_msgs'
+  ros2_message_name: 'Pose'
+  fields_1_to_2:
+    position: 'position'
+    orientation: 'orientation'

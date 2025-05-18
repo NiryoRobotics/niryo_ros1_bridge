@@ -27,3 +27,6 @@ int32[] temperatures
 float64[] voltages
 int32[] hardware_errors
 string[] hardware_errors_message
+
+# New field to track last update time
+time last_update_time
